@@ -239,14 +239,14 @@ const CoworkingBookingSystem = () => {
                 return (
                   <div key={index} className="flex justify-between">
                     <span>{new Date(slot.date + 'T00:00:00').toLocaleDateString()} - {timeSlot?.time}</span>
-                    <span className="font-medium">${timeSlot?.price}</span>
+                    <span className="font-medium"> <IndianRupee className="inline w-4 h-4" />{timeSlot?.price}</span>
                   </div>
                 );
               })}
             </div>
             <div className="border-t border-blue-200 mt-2 pt-2">
               <div className="flex justify-between font-bold text-lg text-blue-800">
-                <span>Total: ${totalPrice}</span>
+                <span>Total:  <IndianRupee className="inline w-4 h-4" />{totalPrice}</span>
                 <button
                   onClick={handleBooking}
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
